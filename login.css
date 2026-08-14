@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  color: #FF8886;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #444;
+}
+
+/* BACKGROUND BLOBS */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  filter: blur(120px);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+.blob1 {
+  background: #FF8886;
+  top: 10%;
+  left: 20%;
+}
+
+.blob2 {
+  background: #F9A36D;
+  bottom: 10%;
+  right: 20%;
+}
+
+.blob3 {
+  background: #A5B67E;
+  bottom: 20%;
+  left: 30%;
+}
+
+/* CARD */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+  z-index: 2;
+}
+
+.login-card {
+  width: 350px;
+  height: 550px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+/* INPUT */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.input-group span {
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+}
+
+.input-group button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* LINKS */
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  margin: 8px 0;
+  color: #666;
+}
+
+/* BUTTONS */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff7aa2;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.btn-google img {
+  width: 20px;
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+/* REGISTER */
+.register {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: #666;
+}

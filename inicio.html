@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aflorar</title>
+  <link rel="stylesheet" href="../Css/inicio.css">
+  <link rel="stylesheet" href="../Css/global.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Aflorar</div>
+
+  <nav class="menu">
+    <a href="inicio.html" class=active>🏠 Início</a>
+    <a href="chat.html" >💼 Flora</a>
+    <a href="estufa.html">⛺ Minha Estufa</a>
+    <a href="jardim.html">🌿 Jardim</a>
+  </nav>
+
+  <div class="profile">👤</div>
+</header>
+
+<main>
+
+  <!-- Tela principal -->
+  <section id="home">
+
+    <div class="welcome">
+      <h2>Bem-vindo(a)!</h2>
+      <p>Vamos cultivar seu bem-estar hoje?</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card pink" onclick="abrirModal()">
+            <h3>Como você está hoje?</h3>
+        </div>
+
+
+      <div class="card orange" id="cardHumor">
+    <h3>Humor atual</h3>
+</div>
+
+      <div class="card green">Em breve</div>
+      <div class="card green large">Em breve</div>
+      <div class="card lightpink">Em breve</div>
+
+    </div>
+
+    <!-- Barômetro -->
+    <div class="barometro">
+      <h3>Barômetro Emocional da Semana</h3>
+      <div class="dias" id="dias"></div>
+    </div>
+
+  </section>
+
+  <!-- NOVA SEÇÃO -->
+<section class="segunda-secao">
+
+  <div class="top-cards">
+
+    <!-- Card ajuda -->
+    <div class="card pink ajuda-card" onclick="toggleAjuda()">
+      <h2>Como posso te ajudar hoje?</h2>
+      <span class="heart">❤️</span>
+    </div>
+
+    <!-- Frase -->
+<div class="card green frase" id="cardFrase">
+  <h2 id="textoFrase">A persistência realiza o impossível.</h2>
+</div>
+
+  </div>
+
+  <!-- PAINEL DE AJUDA -->
+  <div id="painel-ajuda" class="painel hidden">
+
+    <h3>Precisa de Ajuda?</h3>
+    <p>Escolha uma opção abaixo para começar.</p>
+
+    <div class="opcao" onclick="abrirModal()">
+      😊 Registrar meu sentimento
+    </div>
+
+    <div class="opcao" id="btnAnimo">
+  💡 Palavra de ânimo
+</div>
+
+   <div class="opcao" id="btnChat">
+  💬 Conversar com o chat
+</div>
+
+     <div class="opcao" onclick="abrirQuiz()">
+    ❓ O que estou sentindo?
+</div>
+
+  </div>
+
+  <!-- ASSINATURA -->
+  <div class="assinatura">
+
+    <div class="coroa">👑</div>
+
+    <h2>Plano por Assinatura</h2>
+    <p class="sub">Desbloqueie todo o potencial do Aflorar.</p>
+
+    <ul>
+      <li>✔ Experiência livre de anúncios.</li>
+      <li>✔ Mais áreas para explorar no seu Jardim.</li>
+      <li>✔ Espaço ilimitado na sua Estufa.</li>
+      <li>✔ Perguntas diárias ilimitadas para a IA personalizada.</li>
+    </ul>
+
+    <h1>R$ 6,90<span>/mês</span></h1>
+
+    <button>Assine Agora</button>
+
+  </div>
+
+</section>
+<!-- Overlay + Modal -->
+ <p id="textoFrase"></p>
+
+<div id="overlay" class="overlay hidden">
+
+  <div class="modal">
+
+    <!-- Botão fechar -->
+    <span class="fechar" onclick="fecharModal()">✖</span>
+
+    <!-- SUA TELA DE EMOÇÃO -->
+    <section id="emocao">
+      
+      <div class="dias" id="dias"></div>
+
+      <h2>Como você está se sentindo hoje?</h2>
+      <p>Escolha a emoção que melhor descreve seu estado de espírito atual.</p>
+
+      <div class="grid-emocoes">
+
+        <div onclick="selecionar('😊')">😊<span>Feliz</span></div>
+        <div onclick="selecionar('😁')">😁<span>Radiante</span></div>
+        <div onclick="selecionar('😐')">😐<span>Neutro</span></div>
+        <div onclick="selecionar('😠')">😠<span>Irritado</span></div>
+
+        <div onclick="selecionar('😢')">😢<span>Triste</span></div>
+        <div onclick="selecionar('😰')">😰<span>Ansioso</span></div>
+        <div onclick="selecionar('😵')">😵<span>Estressado</span></div>
+        <div onclick="selecionar('😞')">😞<span>Depressivo</span></div>
+
+        <div onclick="selecionar('😟')">😟<span>Inseguro</span></div>
+        <div onclick="selecionar('😴')">😴<span>Cansado</span></div>
+        <div onclick="selecionar('😶')">😶<span>Desmotivado</span></div>
+        <div onclick="selecionar('😧')">😧<span>Preocupado</span></div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+<!-- Modal do card humor atual -->
+<div id="modalHumor" class="overlay hidden">
+
+  <div class="modal">
+
+    <span class="fechar" onclick="fecharHumor()">✖</span>
+
+    <div class="conteudo-humor">
+
+      <div id="emojiHumor" class="emoji-humor"></div>
+
+      <h2 id="tituloHumor"></h2>
+
+      <p id="descricaoHumor"></p>
+
+    </div>
+
+  </div>
+
+</div>
+ <footer>© 2025 Aflorar. Todos os direitos reservados.</footer>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../Js/supabase.js"></script>
+<script src="../Js/inicio.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aflorar</title>
+  <link rel="stylesheet" href="../Css/home.css">
+  <link rel="stylesheet" href="../Css/global.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Aflorar</div>
+    <nav>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Bem vindo(a)<br>ao <span>Aflorar!</span></h1>
+      <p>Cultive seu interior, colha o seu melhor!</p>
+      <a href="login.html">
+      <button>Login</button>
+      </a>
+    </section>
+  </main>
+
+  <!-- Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <h2>Sobre Nós</h2>
+  <p>
+    Aflorar é um espaço dedicado ao bem-estar e ao desenvolvimento pessoal.
+    Nossa missão é oferecer um ambiente seguro e acolhedor onde você possa florescer.
+  </p>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <h2>Contato</h2>
+  <p class="subtitulo">Tem alguma dúvida? Envie-nos uma mensagem.</p>
+
+  <div class="contato-container">
+    
+    <!-- Info -->
+    <div class="contato-info">
+      <div class="info-item">
+        <div class="icon">✉</div>
+        <div>
+          <h3>E-mail</h3>
+          <p>Tem alguma dúvida?</p>
+          <span>aflorarapp2025@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon">📞</div>
+        <div>
+          <h3>Telefone</h3>
+          <p>Você pode ligar a qualquer hora.</p>
+          <span>81 988422009</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="contato-form">
+      <label>Nome</label>
+      <input type="text" placeholder="Seu nome">
+
+      <label>E-mail</label>
+      <input type="email" placeholder="seuemail@exemplo.com">
+
+      <label>Mensagem</label>
+      <textarea placeholder="Escreva sua mensagem aqui..."></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+  </div>
+</section>
+ <footer>© 2025 Aflorar. Todos os direitos reservados.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../Js/supabase.js"></script>
+  <script src="../Js/home.js"></script>
+</body>
+</html>

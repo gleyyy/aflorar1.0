@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Alforar</title>
+  <link rel="stylesheet" href="../Css/login.css">
+  <link rel="stylesheet" href="../Css/global.css">
+</head>
+<body>
+
+  <div class="background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <header>
+    <h1 class="logo">Alforar</h1>
+    <nav>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-card">
+      <h2>Bem-vindo(a) de volta</h2>
+
+      <form>
+        <label>E-mail</label>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="exemplo@email.com">
+        </div>
+
+        <label>Senha</label>
+        <div class="input-group">
+          <input type="password" id="senha" placeholder="Sua senha">
+          <button type="button" id="togglePassword"></button>
+        </div>
+
+        <a href="#" class="forgot">Esqueceu a senha?</a>
+
+      <button type="submit" class="btn-primary">Entrar</button>
+        
+        <div class="divider">ou</div>
+
+        <button class="btn-google">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"/>
+          Entrar com o Google
+        </button>
+
+        <p class="register">
+          Ainda não tem uma conta? <a href="#">Registre-se</a>
+        </p>
+      </form>
+    
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Alforar. Todos os direitos reservados.
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../Js/supabase.js"></script>
+  <script src="../Js/login.js"></script>
+</body>
+</html>

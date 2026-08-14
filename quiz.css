@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#F6F3F0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:1000px;
+}
+
+.voltar{
+    text-decoration:none;
+    color:#4D5B44;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.quiz-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.progress-container{
+    width:100%;
+    height:16px;
+    background:#ECECEC;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#F49A9A;
+    transition:.3s;
+}
+
+h1{
+    text-align:center;
+    color:#33433A;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.option{
+    background:#F7F2EF;
+    border:2px solid transparent;
+    border-radius:14px;
+    padding:28px;
+    cursor:pointer;
+    font-size:1.2rem;
+    transition:.3s;
+}
+
+.option:hover{
+    border-color:#F49A9A;
+}
+
+.option.selected{
+    background:#FFE6E6;
+    border-color:#F49A9A;
+}
+
+#nextBtn{
+    display:block;
+    margin:40px auto 0;
+    border:none;
+    padding:15px 40px;
+    border-radius:12px;
+    background:#F4B7B7;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#nextBtn:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+.result{
+    text-align:center;
+    padding:30px;
+}
+
+.result h2{
+    margin-bottom:20px;
+}
+.respiracao{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:320px;
+    gap:25px;
+}
+
+.circulo-container{
+    width:220px;
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.circulo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        #9ee7a1 0%,
+        #6abf69 70%,
+        #4d9f50 100%
+    );
+
+    box-shadow:
+        0 0 20px rgba(106,191,105,.5),
+        0 0 40px rgba(106,191,105,.3);
+
+    transition:
+        transform 4s ease-in-out,
+        box-shadow 2s ease-in-out;
+}
+#instrucao{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#33433A;
+    min-height:35px;
+}
+.circulo.inspirar{
+    transform: scale(1.8);
+}
+
+.circulo.segurar{
+    transform: scale(1.8);
+}
+
+.circulo.expirar{
+    transform: scale(1);
+}
+#contador{
+    font-size:2rem;
+    font-weight:bold;
+    color:#4D5B44;
+    min-height:40px;
+}

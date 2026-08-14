@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flora - Chat</title>
+    <link rel="stylesheet" href="../Css/chat.css" />
+    <link rel="stylesheet" href="../Css/global.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Aflorar</div>
+
+      <nav class="menu">
+        <a href="inicio.html">🏠 Início</a>
+        <a href="chat.html" class="active">💼 Flora</a>
+        <a href="estufa.html">⛺ Minha Estufa</a>
+        <a href="jardim.html">🌿 Jardim</a>
+      </nav>
+
+      <div class="profile">👤</div>
+    </header>
+
+    <main class="chat-container">
+      <h2>Converse com a Flora</h2>
+
+      <!-- Área de mensagens -->
+      <div class="chat-box" id="chatBox">
+        <div class="message bot">
+          <span class="avatar">🤖</span>
+          <p>
+            Olá! Sou a Flora, sua assistente virtual. Como posso te ajudar hoje?
+          </p>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="chat-input">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Digite sua mensagem..."
+        />
+        <button id="sendBtn">➤</button>
+      </div>
+    </main>
+
+    <footer>© 2025 Aflorar. Todos os direitos reservados.</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../Js/supabase.js"></script>
+    <script src="../Js/chat.js"></script>
+  </body>
+</html>

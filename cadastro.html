@@ -1,0 +1,78 @@
+<!DOCTYPE html> <html lang="pt-BR"> 
+    <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Cadastro - Afflorar</title> 
+        <link rel="stylesheet" href="../Css/cadastro.css"> <!-- Ícones --> 
+        <link rel="stylesheet" href="../Css/font-awesome.min.css"> 
+    </head> 
+    <body> 
+        <div class="background">
+             <span class="blob green b1"></span> 
+             <span class="blob orange b2"></span> 
+             <span class="blob pink b3"></span> 
+             <span class="blob green b4"></span> 
+             <span class="blob pink b5"></span> 
+             <span class="blob orange b6"></span> 
+             <span class="blob green b7"></span> 
+             <span class="blob pink b8"></span> 
+            </div> 
+            <header> 
+                <img src="logo.png" class="logo"> 
+            </header> 
+            <main> 
+                <section class="login-card"> 
+                    <h2>Crie sua conta</h2> 
+                    <form id="registerForm"> 
+                        <label>Nome</label> 
+                        <div class="input-group"> 
+                            <input type="text" id="nome" placeholder="Digite seu nome">
+                        </div>
+                         <label>E-mail</label> 
+                         <div class="input-group"> 
+                            <i class="fa-regular fa-envelope">
+
+                            </i>
+                             <input type="email" id="email" placeholder="Digite seu e-mail">
+                             </div>
+                              <label>Senha</label> 
+                              <div class="input-group"> 
+                                <i class="fa-solid fa-lock">
+
+                                </i>
+                                 <input type="password" id="senha" placeholder="********"> 
+                                 <button type="button" onclick="toggleSenha('senha',this)"> 
+                                    <i class="fa-solid fa-eye">
+
+                                    </i> 
+                                </button> 
+                            </div> 
+                            <label>Confirme sua senha</label> 
+                            <div class="input-group">
+                                 <i class="fa-solid fa-lock">
+
+                                 </i>
+                                  <input type="password" id="confirmar" placeholder="********">
+                                   <button type="button" onclick="toggleSenha('confirmar',this)">
+                                     <i class="fa-solid fa-eye">
+
+                                     </i>
+                                     </button>
+                                     </div>
+                             <div class="bottom">
+                                 <p>Já tem uma conta?
+                                     <a href="../html/login.html">Faça login</a>
+                                     </p> <button class="btn-next">
+                                         <i class="fa-solid fa-arrow-right">
+
+                                         </i>
+                                         </button>
+                             </div> 
+                            </form> 
+                        </section> 
+                    </main> 
+                    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+                    <script src="../Js/supabase.js"></script>
+                    <script src="../Js/cadastro.js">
+
+                    </script>
+                     </body>
+                      </html>

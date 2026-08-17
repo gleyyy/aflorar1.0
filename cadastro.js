@@ -1,55 +1,64 @@
-document
-.getElementById("registerForm")
-.addEventListener("submit", async (e) => {
+const form =
+    document.getElementById("cadastroForm");
 
-    e.preventDefault();
+form.addEventListener(
+    "submit",
+    async (e) => {
 
-    const nome =
-        document.getElementById("nome").value;
+        e.preventDefault();
 
-    const email =
-        document.getElementById("email").value;
+        const nome =
+            document.getElementById("nome").value;
 
-    const senha =
-        document.getElementById("senha").value;
+        const email =
+            document.getElementById("email").value;
 
-    const confirmar =
-        document.getElementById("confirmar").value;
+        const senha =
+            document.getElementById("senha").value;
 
-    if(senha !== confirmar){
+        const confirmar =
+            document.getElementById("confirmar").value;
 
-        alert("As senhas não coincidem");
-        return;
+        if(senha !== confirmar){
+
+            alert("As senhas não coincidem.");
+            return;
+
+        }
+
+        const { data, error } =
+            await supabase.auth.signUp({
+
+                email,
+                password: senha
+
+            });
+
+        if(error){
+
+            alert(error.message);
+            return;
+
+        }
+
+        const usuarioId =
+            data.user.id;
+
+        await supabase
+        .from("perfis")
+        .insert([{
+
+            id: usuarioId,
+            nome
+
+        }]);
+
+        alert(
+            "Cadastro realizado com sucesso!"
+        );
+
+        window.location.href =
+            "login.html";
 
     }
-
-    const { data, error } =
-        await supabase.auth.signUp({
-
-            email,
-            password: senha
-
-        });
-
-    if(error){
-
-        alert(error.message);
-        return;
-
-    }
-
-    await supabase
-    .from("perfis")
-    .insert([{
-
-        id: data.user.id,
-        nome
-
-    }]);
-
-    alert("Cadastro realizado!");
-
-    window.location.href =
-        "login.html";
-
-});
+);

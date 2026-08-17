@@ -1,48 +1,42 @@
-document
-.querySelector("form")
-.addEventListener("submit", async (e) => {
+const form =
+    document.getElementById("loginForm");
 
-    e.preventDefault();
+form.addEventListener(
+    "submit",
+    async (e) => {
 
-    const email =
-        document.getElementById("email").value;
+        e.preventDefault();
 
-    const senha =
-        document.getElementById("senha").value;
+        const email =
+            document.getElementById("email").value;
 
-    const { data, error } =
-        await supabase.auth.signInWithPassword({
+        const senha =
+            document.getElementById("senha").value;
 
-            email,
-            password: senha
+        const { data, error } =
+            await supabase.auth.signInWithPassword({
 
-        });
+                email,
+                password: senha
 
-    if(error){
+            });
 
-        alert("Email ou senha inválidos");
-        return;
+        if(error){
+
+            alert("Login inválido");
+            return;
+
+        }
+
+        localStorage.setItem(
+            "aflorar_usuario_id",
+            data.user.id
+        );
+
+        alert("Login realizado!");
+
+        window.location.href =
+            "inicio.html";
 
     }
-
-    const { data:perfil } =
-        await supabase
-        .from("perfis")
-        .select("*")
-        .eq("id", data.user.id)
-        .single();
-
-    localStorage.setItem(
-        "usuario",
-        JSON.stringify(perfil)
-    );
-
-    localStorage.setItem(
-        "aflorar_usuario_id",
-        data.user.id
-    );
-
-    window.location.href =
-        "inicio.html";
-
-});
+);

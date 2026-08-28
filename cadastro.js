@@ -27,8 +27,7 @@ form.addEventListener(
         }
 
         const { data, error } =
-            await supabase.auth.signUp({
-
+            await supabaseClient.auth.signUp(...)
                 email,
                 password: senha
 
@@ -44,8 +43,8 @@ form.addEventListener(
         const usuarioId =
             data.user.id;
 
-        await supabase
-        .from("perfis")
+       await supabaseClient
+    .from("perfis")
         .insert([{
 
             id: usuarioId,

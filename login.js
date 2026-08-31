@@ -1,7 +1,7 @@
 const { createClient } = window.supabase;
 
 const supabaseClient = createClient(
-    "SUA_URL_DO_SUPABASE",
+    "https://atnfazrohqgsgrzuyzup.supabase.co/rest/v1/",
     "SUA_CHAVE_ANON"
 );
 

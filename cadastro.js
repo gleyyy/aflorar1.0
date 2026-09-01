@@ -26,12 +26,11 @@ form.addEventListener(
 
         }
 
-        const { data, error } =
-            await supabaseClient.auth.signUp(...)
-                email,
-                password: senha
-
-            });
+       const { data, error } =
+    await supabaseClient.auth.signUp({
+        email: email,
+        password: senha
+    });
 
         if(error){
 

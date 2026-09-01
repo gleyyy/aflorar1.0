@@ -46,5 +46,5 @@ form.addEventListener("submit", async (e) => {
     alert("Cadastro realizado com sucesso!");
 
     // Redireciona para a página inicial
-    window.location.href = "index.html";
+    window.location.href = "inicio.html";
 });
